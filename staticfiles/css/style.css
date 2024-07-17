@@ -1,0 +1,24 @@
+
+    /* CSS for navbar */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar-brand {
+      float: left;
+      padding: 15px 20px;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .navbar-right {
+      float: right;
+      padding: 15px 20px;
+    }
+
+    .navbar-right a {
+      color: #fff;
+      margin-left: 10px;
+      text-decoration: none;
+    }

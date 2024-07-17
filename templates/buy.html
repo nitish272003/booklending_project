@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  {% for book in books %}
+    <div class="col-md-4">
+      <div class="card">
+        <img src="{{ book.book_image.url }}" alt="{{ book.book_name }}" class="card-img-top smaller-image">
+        <div class="card-body smaller-card">
+          <h5 class="card-title">{{ book.book_name }}</h5>
+          <p class="card-text">Seller Name: {{ book.seller_name }}</p>
+          <a href="{% url 'books:bookdetail' book_id=book.id %}" class="btn btn-primary">More Details</a>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <p>No books found</p>
+  {% endfor %}
+</div>
+
+  
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        
+    
+{% block content %}
+<img class="bg-img" src="{% static 'images/book.jpg' %}" alt="">
+
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tags == 'info' %}
+      <script>
+        var message = "{{ message|escapejs }}";
+        alert(message);
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+
+
+{%endblock%}
+

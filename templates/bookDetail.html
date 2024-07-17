@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ book.book_image.url }}" alt="{{ book.book_name }}" class="card-img-top" height="286" width="180">
+        <div class="card-body">
+            <h5 class="card-title">{{ book.book_name }}</h5>
+            <p class="card-text">Price: {{ book.price }}</p>
+            <p class="card-text">Seller Name: {{ book.seller_name }}</p>
+            <p class="card-text">Location: {{ book.location }}</p>
+            <p class="card-text">Phone Number: {{ book.phone_number }}</p>
+            <a href="{% url 'books:contactseller' book_id=book.id %}" class="btn btn-primary">Buy</a>
+        </div>
+        </div>
+      </div>
+      
+</div>
+  
+
+{% endblock %}
+
+
+
+
